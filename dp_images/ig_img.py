@@ -29,7 +29,7 @@ try:
     try:
         sleep(5)
         url_img = driver.find_element_by_xpath('//*[@id="iv-container"]/div[6]/div/img').get_attribute("src")
-        path = "path/dp_images/saved_images"
+        path = "path/dp_images/saved_images" # if not make a directory saved_images
         try:
             if not os.listdir(path):
                 urllib.request.urlretrieve(url_img, f"saved_images/{user_name}.jpg")
